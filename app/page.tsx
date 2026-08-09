@@ -37,16 +37,16 @@ export default function Home() {
 
       {/* ДО/ПОСЛЕ ДЕМО */}
       <section className="py-24 px-4 max-w-5xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Результат говорит сам за себя</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Результат нашей работы - возвращенное мгновение.</h2>
         <p className="text-gray-500 text-center mb-12 max-w-xl mx-auto">
-          Перетащите ползунок, чтобы увидеть разницу между оригиналом и реставрацией
+          Перетащите ползунок, чтобы увидеть разницу между сохранившейся фотографией и реставрацией момента.
         </p>
         <BeforeAfterSlider
           before="/images/demo-before.jpg"
           after="/images/demo-after.jpg"
         />
         <p className="text-center text-sm text-gray-400 mt-6">
-          * Для демонстрации замените изображения в папке public/images/
+          Сложность таких работ в сохранении формы для возвращения света.
         </p>
       </section>
 
