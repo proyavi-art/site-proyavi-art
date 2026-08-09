@@ -8,7 +8,7 @@ export default function Home() {
       {/* HERO со слайдером фонов */}
       <HeroSlider>
         <img
-          src="/images/logo.png"
+          src="/images/logo-white.png"
           alt="ProЯвь"
           className="mx-auto mb-6 w-auto max-w-[280px] md:max-w-[400px] h-auto drop-shadow-lg"
         />
