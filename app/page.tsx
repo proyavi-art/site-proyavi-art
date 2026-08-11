@@ -45,8 +45,8 @@ export default function Home() {
           before="/images/demo-before.jpg"
           after="/images/demo-after.jpg"
         />
-        <p className="text-center text-sm text-gray-400 mt-6">
-          Сложность таких работ в сохранении формы для возвращения света.
+        <p className="text-center text-sm text-gray-500 mt-6">
+          Трансформация фотографии в качество, которое привык воспринимать мозг современного человека.
         </p>
       </section>
 
