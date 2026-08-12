@@ -87,22 +87,22 @@ export default function Home() {
                 Последнее слово всегда остаётся за реставратором.
               </p>
             </article>
-          </div>
 
-          {/* Результат */}
-          <div className="mt-20 text-center max-w-2xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Результат</h2>
-            <p className="text-xl text-gray-600 mb-6 leading-relaxed">
-              Фотография начинает дышать, возвращая вас в тот самый момент.
-            </p>
-            <p className="text-gray-500 mb-6 leading-relaxed">
-              Она пробуждает яркие воспоминания или создаёт ощущение присутствия —
-              будто между вами и прошлым снова исчезает время.
-            </p>
-            <p className="text-gray-900 font-medium leading-relaxed">
-              Без пластика и синтетики.
-              Только уважение к источнику и естественность восприятия.
-            </p>
+            {/* Результат — карточка шириной 2 колонки */}
+            <article className="md:col-span-2 lg:col-span-2 lg:col-start-2 bg-white p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-shadow text-center">
+              <h3 className="text-2xl font-bold mb-4">Результат</h3>
+              <p className="text-lg text-gray-600 mb-4 leading-relaxed">
+                Фотография начинает дышать, возвращая вас в тот самый момент.
+              </p>
+              <p className="text-gray-500 mb-4 leading-relaxed">
+                Она пробуждает яркие воспоминания или создаёт ощущение присутствия —
+                будто между вами и прошлым снова исчезает время.
+              </p>
+              <p className="text-gray-900 font-medium leading-relaxed">
+                Без пластика и синтетики.
+                Только уважение к источнику и естественность восприятия.
+              </p>
+            </article>
           </div>
         </div>
       </section>
