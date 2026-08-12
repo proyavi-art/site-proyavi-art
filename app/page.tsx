@@ -37,7 +37,7 @@ export default function Home() {
 
       {/* ДО/ПОСЛЕ ДЕМО */}
       <section className="py-24 px-4 max-w-5xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Результат нашей работы - возвращенное мгновение.</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Результат нашей работы — возвращённое мгновение.</h2>
         <p className="text-gray-500 text-center mb-12 max-w-xl mx-auto">
           Перетащите ползунок, чтобы увидеть разницу между сохранившейся фотографией и реставрацией момента.
         </p>
@@ -50,34 +50,59 @@ export default function Home() {
         </p>
       </section>
 
-      {/* УСЛУГИ */}
+      {/* УСЛУГИ + РЕЗУЛЬТАТ */}
       <section className="py-24 px-4 bg-gray-50">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">Что мы делаем</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Реставрация",
-                desc: "Удаление царапин, пятен, складок. Восстановление цвета и контраста.",
-                icon: "✦",
-              },
-              {
-                title: "Реконструкция",
-                desc: "Восстановление утраченных фрагментов: лица, фон, детали одежды.",
-                icon: "◈",
-              },
-              {
-                title: "Колоризация",
-                desc: "Окрашивание чёрно-белых фотографий в естественные цвета с помощью ИИ.",
-                icon: "◉",
-              },
-            ].map((s) => (
-              <div key={s.title} className="bg-white p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-shadow">
-                <div className="text-3xl mb-4">{s.icon}</div>
-                <h3 className="text-xl font-semibold mb-3">{s.title}</h3>
-                <p className="text-gray-500 leading-relaxed">{s.desc}</p>
-              </div>
-            ))}
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <article className="bg-white p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-shadow">
+              <h3 className="text-xl font-semibold mb-3">Реставрация</h3>
+              <p className="text-gray-500 leading-relaxed">
+                Убираем пыль, царапины, заломы и следы времени,
+                сохраняя оригинальную форму изображения.
+              </p>
+            </article>
+
+            <article className="bg-white p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-shadow">
+              <h3 className="text-xl font-semibold mb-3">Реконструкция</h3>
+              <p className="text-gray-500 leading-relaxed">
+                Восстанавливаем утраченные элементы и отделяем подлинную
+                информацию фотографии от шума и дефектов технологии.
+              </p>
+            </article>
+
+            <article className="bg-white p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-shadow">
+              <h3 className="text-xl font-semibold mb-3">Колоризация</h3>
+              <p className="text-gray-500 leading-relaxed">
+                Возвращаем естественную цветовую палитру, свет, объём
+                и эмоциональную тональность эпохи.
+              </p>
+            </article>
+
+            <article className="bg-white p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-shadow">
+              <h3 className="text-xl font-semibold mb-3">Контроль специалиста</h3>
+              <p className="text-gray-500 leading-relaxed">
+                AI ускоряет работу, но каждое ключевое решение принимает человек.
+                Последнее слово всегда остаётся за реставратором.
+              </p>
+            </article>
+          </div>
+
+          {/* Результат */}
+          <div className="mt-20 text-center max-w-2xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Результат</h2>
+            <p className="text-xl text-gray-600 mb-6 leading-relaxed">
+              Фотография начинает дышать, возвращая вас в тот самый момент.
+            </p>
+            <p className="text-gray-500 mb-6 leading-relaxed">
+              Она пробуждает яркие воспоминания или создаёт ощущение присутствия —
+              будто между вами и прошлым снова исчезает время.
+            </p>
+            <p className="text-gray-900 font-medium leading-relaxed">
+              Без пластика и синтетики.
+              Только уважение к источнику и естественность восприятия.
+            </p>
           </div>
         </div>
       </section>
