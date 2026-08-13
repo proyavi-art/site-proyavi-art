@@ -114,24 +114,62 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ПРОЦЕСС */}
-      <section className="py-24 px-4 max-w-4xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">Как это работает</h2>
-        <div className="space-y-12">
-          {[
-            { step: "01", title: "Загрузите фото", desc: "Отправьте снимок через форму на сайте или в Telegram" },
-            { step: "02", title: "Оценка", desc: "Мы оцениваем состояние фото и сообщаем стоимость и сроки" },
-            { step: "03", title: "Реставрация", desc: "AI обрабатывает изображение, художник доводит до идеала" },
-            { step: "04", title: "Результат", desc: "Получаете готовое фото в высоком разрешении" },
-          ].map((item) => (
-            <div key={item.step} className="flex gap-6 items-start">
-              <span className="text-4xl font-bold text-gray-200 flex-shrink-0 w-16">{item.step}</span>
-              <div>
-                <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                <p className="text-gray-500">{item.desc}</p>
+      {/* ПРОЦЕСС — временная шкала */}
+      <section className="py-24 px-4 bg-gray-50">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">Как это работает</h2>
+
+          <div className="relative">
+            {/* Вертикальная линия */}
+            <div className="absolute left-5 top-2 bottom-2 w-px bg-gray-300" />
+
+            {[
+              {
+                step: "01",
+                title: "Оцифруйте фотографию",
+                desc: "Отсканируйте фотографию или сфотографируйте высококачественной камерой. Рекомендуемое разрешение 600 dpi, глубина 16-32 бит — это позволит проявить элементы в тенях.",
+              },
+              {
+                step: "02",
+                title: "Загрузите фото",
+                desc: "Отправьте нам снимок через форму на сайте или в Telegram.",
+              },
+              {
+                step: "03",
+                title: "Оценка",
+                desc: "Мы оцениваем состояние фотографии, объём работы и сообщаем стоимость и сроки.",
+              },
+              {
+                step: "04",
+                title: "Точка трансформации",
+                desc: "Мы отделяем шум, следы времени и несовершенства технологии от подлинного изображения, сохраняя его характер, форму и эмоциональную тональность, транслируя в современное визуальное пространство.",
+              },
+              {
+                step: "05",
+                title: "Результат для оценки",
+                desc: "До оплаты вы получаете фрагмент готовой работы в высоком разрешении и оцениваете, насколько удовлетворены результатом.",
+              },
+              {
+                step: "06",
+                title: "Оплата",
+                desc: "Если результат вас устраивает, вы производите оплату удобным способом.",
+              },
+              {
+                step: "07",
+                title: "Получение возвращённого момента",
+                desc: "После поступления оплаты вы получаете на ваш контактный адрес полное восстановленное изображение в цифровом формате. Без шума, но с возвращённым светом.",
+              },
+            ].map((item, index) => (
+              <div key={item.step} className="relative pl-14 pb-12 last:pb-0">
+                {/* Точка с номером на линии */}
+                <div className="absolute left-0 top-0 w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-sm font-bold text-gray-700 shadow-sm">
+                  {item.step}
+                </div>
+                <h3 className="text-xl font-semibold mb-2 pt-2">{item.title}</h3>
+                <p className="text-gray-500 leading-relaxed">{item.desc}</p>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 
