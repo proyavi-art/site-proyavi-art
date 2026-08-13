@@ -55,6 +55,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">Что мы делаем</h2>
 
+          {/* 4 карточки */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <article className="bg-white p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-shadow">
               <h3 className="text-xl font-semibold mb-3">Реставрация</h3>
@@ -87,74 +88,28 @@ export default function Home() {
                 Последнее слово всегда остаётся за реставратором.
               </p>
             </article>
+          </div>
 
-            {/* Результат — карточка шириной 2 колонки */}
-            <article className="md:col-span-2 lg:col-span-2 lg:col-start-2 bg-white p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-shadow text-center">
-              <h3 className="text-2xl font-bold mb-4">Результат</h3>
-              <p className="text-lg text-gray-600 mb-4 leading-relaxed">
-                Фотография начинает дышать, возвращая вас в тот самый момент.
-              </p>
-              <p className="text-gray-500 mb-4 leading-relaxed">
-                Она пробуждает яркие воспоминания или создаёт ощущение присутствия —
-                будто между вами и прошлым снова исчезает время.
-              </p>
-              <p className="text-gray-900 font-medium leading-relaxed">
-                Без пластика и синтетики.
-                Только уважение к источнику и естественность восприятия.
-              </p>
-            </article>
-            <article className="md:col-span-2 lg:col-span-2 lg:col-start-2 bg-white p-10 rounded-2xl border border-gray-100 hover:shadow-lg transition-shadow text-center">
-  <h3 className="text-2xl font-bold mb-6">Результат</h3>
-  <div className="max-w-md mx-auto space-y-5">
-    <p className="text-lg text-gray-600 leading-relaxed">
-      Фотография начинает дышать, возвращая вас в тот самый момент.
-    </p>
-    <p className="text-gray-500 leading-relaxed">
-      Она пробуждает яркие воспоминания или создаёт ощущение присутствия — будто между вами и прошлым снова исчезает время.
-    </p>
-    <p className="text-gray-900 font-medium leading-relaxed">
-      Без пластика и синтетики. Только уважение к источнику и естественность восприятия.
-    </p>
-  </div>
-</article>
-            <article className="md:col-span-2 lg:col-span-2 lg:col-start-2 bg-white p-10 rounded-2xl border border-gray-100 hover:shadow-lg transition-shadow">
-  <div className="border-l-2 border-black pl-8 py-2">
-    <h3 className="text-2xl font-bold mb-6">Результат</h3>
-    <p className="text-lg text-gray-600 mb-4 leading-relaxed">
-      Фотография начинает дышать, возвращая вас в тот самый момент.
-    </p>
-    <p className="text-gray-500 mb-4 leading-relaxed">
-      Она пробуждает яркие воспоминания или создаёт ощущение присутствия — будто между вами и прошлым снова исчезает время.
-    </p>
-    <p className="text-gray-900 font-medium leading-relaxed">
-      Без пластика и синтетики. Только уважение к источнику и естественность восприятия.
-    </p>
-  </div>
-</article>
-{/* 4 карточки услуг */}
-<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-  ... (4 article без изменений)
-</div>
+          {/* Разделитель */}
+          <div className="mt-20 mb-10 flex items-center gap-4">
+            <div className="flex-1 h-px bg-gray-300" />
+            <span className="text-sm text-gray-400 tracking-widest uppercase font-medium">Результат</span>
+            <div className="flex-1 h-px bg-gray-300" />
+          </div>
 
-{/* Разделитель */}
-<div className="mt-20 mb-4 flex items-center gap-4">
-  <div className="flex-1 h-px bg-gray-200" />
-  <span className="text-sm text-gray-400 tracking-widest uppercase">Результат</span>
-  <div className="flex-1 h-px bg-gray-200" />
-</div>
-
-{/* Результат — отдельная карточка, не в сетке */}
-<article className="max-w-2xl mx-auto bg-white p-10 rounded-2xl border border-gray-100 hover:shadow-lg transition-shadow text-center">
-  <p className="text-xl text-gray-600 mb-5 leading-relaxed">
-    Фотография начинает дышать, возвращая вас в тот самый момент.
-  </p>
-  <p className="text-gray-500 mb-5 leading-relaxed">
-    Она пробуждает яркие воспоминания или создаёт ощущение присутствия — будто между вами и прошлым снова исчезает время.
-  </p>
-  <p className="text-gray-900 font-medium leading-relaxed">
-    Без пластика и синтетики. Только уважение к источнику и естественность восприятия.
-  </p>
-</article>
+          {/* Результат — текст прямо на фоне секции */}
+          <div className="max-w-2xl mx-auto text-center space-y-5">
+            <p className="text-xl text-gray-700 leading-relaxed">
+              Фотография начинает дышать, возвращая вас в тот самый момент.
+            </p>
+            <p className="text-gray-500 leading-relaxed">
+              Она пробуждает яркие воспоминания или создаёт ощущение присутствия —
+              будто между вами и прошлым снова исчезает время.
+            </p>
+            <p className="text-gray-900 font-medium leading-relaxed">
+              Без пластика и синтетики.
+              Только уважение к источнику и естественность восприятия.
+            </p>
           </div>
         </div>
       </section>
