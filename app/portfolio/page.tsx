@@ -89,11 +89,11 @@ export default function Portfolio() {
                 href={`/portfolio/${cat.slug}`}
                 className="group block bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-lg transition-shadow"
               >
-                <div className="aspect-[4/3] overflow-hidden bg-gray-100">
+                <div className="overflow-hidden bg-gray-100">
                   <img
                     src={cat.img}
                     alt={cat.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-auto object-contain mx-auto"
                   />
                 </div>
                 <div className="p-6">
@@ -127,11 +127,11 @@ export default function Portfolio() {
                 href={`/portfolio/${cat.slug}`}
                 className="group block bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-lg transition-shadow"
               >
-                <div className="aspect-[4/3] overflow-hidden bg-gray-100">
+                <div className="overflow-hidden bg-gray-100">
                   <img
                     src={cat.img}
                     alt={cat.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-auto object-contain mx-auto"
                   />
                 </div>
                 <div className="p-6">
