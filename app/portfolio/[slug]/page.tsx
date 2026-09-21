@@ -18,6 +18,7 @@ const data: Record<string, {
     works: [
       { before: `/images/gallery/family-1-before.jpg`, after: `/images/gallery/family-1-after.jpg`, desc: `Восстановление семейного портрета 1950-х годов` },
       { before: `/images/gallery/family-2-before.jpg`, after: `/images/gallery/family-2-after.jpg`, desc: `Реконструкция утраченных фрагментов группового снимка` },
+      { before: `/images/gallery/family-3-before.jpg`, after: `/images/gallery/family-3-after.jpg`, desc: `Реконструкция утраченных фрагментов группового снимка` },
     ],
   },
   places: {
