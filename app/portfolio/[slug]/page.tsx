@@ -107,7 +107,7 @@ export default function CategoryPage() {
   return (
     <div className="bg-[#A7D48D]">
       <section className="pt-24 pb-12 px-4">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <Link
             href="/portfolio"
             className="inline-block text-gray-700 hover:text-black transition-colors text-sm font-medium mb-6"
@@ -129,14 +129,14 @@ export default function CategoryPage() {
       </section>
 
       <section className="py-16 px-4">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <p className="text-center text-gray-600 text-sm mb-12 max-w-xl mx-auto">
             {cat.caption}
           </p>
 
-          <div className="space-y-16">
+          <div className="space-y-20">
             {cat.works.map((work, idx) => (
-              <div key={idx} className="bg-white rounded-2xl border border-gray-100 p-6 md:p-8">
+              <div key={idx} className="bg-white rounded-2xl border border-gray-100 p-4 md:p-8">
                 <BeforeAfterSlider before={work.before} after={work.after} />
                 <p className="text-center text-gray-500 mt-4 text-sm">{work.desc}</p>
               </div>
