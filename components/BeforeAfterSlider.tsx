@@ -21,7 +21,7 @@ export default function BeforeAfterSlider({ before, after }: { before: string; a
   return (
     <div
       ref={containerRef}
-      className="relative w-full max-w-2xl mx-auto rounded-2xl overflow-hidden select-none cursor-ew-resize border border-gray-200 bg-gray-100"
+      className="relative w-full rounded-2xl overflow-hidden select-none cursor-ew-resize border border-gray-200 bg-gray-100"
       onMouseMove={onMouseMove}
       onMouseUp={onMouseUp}
       onMouseLeave={onMouseUp}
@@ -29,14 +29,18 @@ export default function BeforeAfterSlider({ before, after }: { before: string; a
       onTouchEnd={onMouseUp}
     >
       {/* After (фон) */}
-      <img src={after} alt="После" className="w-full h-auto max-h-[600px] object-contain mx-auto block" />
-      
-      {/* Before (обрезается) */}
+      <img
+        src={after}
+        alt="После"
+        className="w-full h-auto max-h-[85vh] object-contain mx-auto block"
+      />
+
+      {/* Before (обрезается по ширине) */}
       <div className="absolute inset-0 overflow-hidden bg-gray-100" style={{ width: `${slider}%` }}>
         <img
           src={before}
           alt="До"
-          className="h-auto max-h-[600px] object-contain max-w-none block"
+          className="h-auto max-h-[85vh] object-contain max-w-none block"
           style={{ width: `${10000 / slider}%` }}
         />
       </div>
