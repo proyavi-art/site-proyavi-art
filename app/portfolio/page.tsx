@@ -71,7 +71,7 @@ export default function Portfolio() {
 
       {/* ИНДИВИДУАЛЬНЫМ ЗАКАЗЧИКАМ */}
       <section className="py-16 px-4">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="flex items-center gap-4 mb-6">
             <div className="flex-1 h-px bg-black/10" />
             <span className="text-sm text-gray-700 tracking-widest uppercase font-medium">Индивидуальным заказчикам</span>
@@ -109,7 +109,7 @@ export default function Portfolio() {
 
       {/* КОРПОРАТИВНЫМ КЛИЕНТАМ */}
       <section className="py-16 px-4">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="flex items-center gap-4 mb-6">
             <div className="flex-1 h-px bg-black/10" />
             <span className="text-sm text-gray-700 tracking-widest uppercase font-medium">Корпоративным клиентам</span>
