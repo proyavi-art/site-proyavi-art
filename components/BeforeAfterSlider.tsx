@@ -10,7 +10,7 @@ export default function BeforeAfterSlider({ before, after }: { before: string; a
     if (!containerRef.current) return;
     const rect = containerRef.current.getBoundingClientRect();
     const x = ((clientX - rect.left) / rect.width) * 100;
-    setSlider(Math.max(5, Math.min(95, x)));
+    setSlider(Math.max(2, Math.min(98, x)));
   }, []);
 
   const onMouseDown = () => { isDragging.current = true; };
@@ -21,7 +21,7 @@ export default function BeforeAfterSlider({ before, after }: { before: string; a
   return (
     <div
       ref={containerRef}
-      className="relative w-full rounded-2xl overflow-hidden select-none cursor-ew-resize border border-gray-200 bg-gray-100"
+      className="relative w-full overflow-hidden bg-gray-100 select-none cursor-ew-resize"
       onMouseMove={onMouseMove}
       onMouseUp={onMouseUp}
       onMouseLeave={onMouseUp}
@@ -45,25 +45,27 @@ export default function BeforeAfterSlider({ before, after }: { before: string; a
         />
       </div>
 
-      {/* Ползунок */}
+      {/* Линия разделения — толстая, с тенью, от края до края */}
       <div
-        className="absolute top-0 bottom-0 w-0.5 bg-white"
+        className="absolute inset-y-0 w-[3px] bg-white shadow-[0_0_10px_rgba(0,0,0,0.6)]"
         style={{ left: `${slider}%`, transform: "translateX(-50%)" }}
       >
+        {/* Кружок ползунка */}
         <div
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg border border-gray-100"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-xl border border-gray-200"
           onMouseDown={onMouseDown}
           onTouchStart={onMouseDown}
         >
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2">
-            <path d="M10 4l4 4-4 4" /><path d="M6 4l-4 4 4 4" />
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
+            <path d="M15 18l6-6-6-6" />
+            <path d="M9 6l-6 6 6 6" />
           </svg>
         </div>
       </div>
 
       {/* Метки */}
-      <span className="absolute top-4 left-4 bg-black/60 text-white text-xs px-3 py-1 rounded-full">До</span>
-      <span className="absolute top-4 right-4 bg-white/80 text-black text-xs px-3 py-1 rounded-full">После</span>
+      <span className="absolute top-3 left-3 bg-black/70 text-white text-xs px-3 py-1.5 rounded-full font-medium">До</span>
+      <span className="absolute top-3 right-3 bg-white/90 text-black text-xs px-3 py-1.5 rounded-full font-medium">После</span>
     </div>
   );
 }
