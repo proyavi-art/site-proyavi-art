@@ -1,13 +1,15 @@
 "use client";
+import { useState } from "react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
+import Lightbox from "@/components/Lightbox";
 
 const data: Record<string, {
   title: string;
   description: string;
   caption: string;
-  works: { before: string; after: string; desc: string }[];
+  works: { before: string; after: string; desc: string; note?: string; review?: string }[];
 }> = {
   family: {
     title: `Семейные архивы`,
@@ -16,9 +18,19 @@ const data: Record<string, {
 Как правило, чем старше фотография, тем больше деталей утрачено — из-за времени и несовершенства технологий прошлого. Но даже спустя десятилетия что-то всё ещё можно вернуть.`,
     caption: `Из семейных фотоархивов,мгновения,сохранившие взляд улыбку близкого человека или родственника.Памятное событие или место,куда хотелось бы`,
     works: [
-      { before: `/images/gallery/family-1-before.jpg`, after: `/images/gallery/family-1-after.jpg`, desc: `Восстановление семейного портрета 1950-х годов` },
-      { before: `/images/gallery/family-2-before.jpg`, after: `/images/gallery/family-2-after.jpg`, desc: `Реконструкция утраченных фрагментов группового снимка` },
-      { before: `/images/gallery/family-3-before.jpg`, after: `/images/gallery/family-3-after.jpg`, desc: `Реконструкция утраченных фрагментов группового снимка` },
+      { 
+        before: `/images/gallery/family-1-before.jpg`, 
+        after: `/images/gallery/family-1-after.jpg`, 
+        desc: `Восстановление семейного портрета 1950-х годов`,
+        note: `Фотография поступила в крайне повреждённом состоянии: глубокие царапины, выцветание, утрата контраста. Мы провели многоступенчатую реставрацию: удалили дефекты, восстановили тональную глубину, вернули естественную цветовую палитру. Результат — фотография, которую можно передавать по наследству.`,
+        review: `Я не верил, что из этой разорванной фотографии можно что-то сделать. А теперь она висит у меня в гостиной в рамке. Спасибо вам огромное.`,
+      },
+      { 
+        before: `/images/gallery/family-2-before.jpg`, 
+        after: `/images/gallery/family-2-after.jpg`, 
+        desc: `Реконструкция утраченных фрагментов группового снимка`,
+        note: `Большая часть правого края снимка была утрачена — отсутствовали два человека из группы. С помощью AI-реконструкции и ручной доводки мы восстановили недостающие фрагменты, сохранив стилистику эпохи и характер оригинала.`,
+      },
     ],
   },
   places: {
@@ -26,8 +38,19 @@ const data: Record<string, {
     description: `Вы снова там.Что бы вспомнить эмоции и`,
     caption: `Памятное событие или место,куда хотелось бы вернуться`,
     works: [
-      { before: `/images/gallery/places-1-before.jpg`, after: `/images/gallery/places-1-after.jpg`, desc: `Восстановление пейзажа с выцветшими цветами` },
-      { before: `/images/gallery/places-2-before.jpg`, after: `/images/gallery/places-2-after.jpg`, desc: `Реставрация снимка с праздника` },
+      { 
+        before: `/images/gallery/places-1-before.jpg`, 
+        after: `/images/gallery/places-1-after.jpg`, 
+        desc: `Восстановление пейзажа с выцветшими цветами`,
+        note: `Пейзаж снят на раннюю цветную плёнку, которая сильно выцвела. Мы восстановили насыщенность зелени, глубину неба и детали переднего плана.`,
+      },
+      { 
+        before: `/images/gallery/places-2-before.jpg`, 
+        after: `/images/gallery/places-2-after.jpg`, 
+        desc: `Реставрация снимка с праздника`,
+        note: `Снимок с семейного торжества — повреждён водой и временем. Восстановлены лица, детали интерьера, цветовая гамма.`,
+        review: `Это единственная фотография с нашей свадьбы, которая осталась. Теперь она снова жива.`,
+      },
     ],
   },
   portrait: {
@@ -35,8 +58,19 @@ const data: Record<string, {
     description: `Взгляд,улыбка,локон волос близкого вам человека -то,за что цепляется Ваша память.Возможно,это будет яркая вспышка -`,
     caption: `Взгляд, улыбка, локон волос — то, за что цепляется память`,
     works: [
-      { before: `/images/gallery/portrait-1-before.jpg`, after: `/images/gallery/portrait-1-after.jpg`, desc: `Восстановление детального портрета` },
-      { before: `/images/gallery/portrait-2-before.jpg`, after: `/images/gallery/portrait-2-after.jpg`, desc: `Реконструкция повреждённого снимка` },
+      { 
+        before: `/images/gallery/portrait-1-before.jpg`, 
+        after: `/images/gallery/portrait-1-after.jpg`, 
+        desc: `Восстановление детального портрета`,
+        note: `Портретная фотография требует особого внимания к мелочам — текстуре кожи, бликам в глазах, мягкости света. Каждый элемент был восстановлен вручную.`,
+      },
+      { 
+        before: `/images/gallery/portrait-2-before.jpg`, 
+        after: `/images/gallery/portrait-2-after.jpg`, 
+        desc: `Реконструкция повреждённого снимка`,
+        note: `Фотография была разорвана пополам и склеена скотчем. Мы убрали следы скотча, восстановили разрыв и вернули единство изображению.`,
+        review: `Бабушка расплакалась, когда увидела. Это бесценно.`,
+      },
     ],
   },
   instant: {
@@ -44,8 +78,18 @@ const data: Record<string, {
     description: `Момент выхвачен и тут же проявлен на polaroid снимке.Но много деталей не видно.Увидите полностью`,
     caption: `Момент выхвачен на Polaroid. Увидите полностью`,
     works: [
-      { before: `/images/gallery/instant-1-before.jpg`, after: `/images/gallery/instant-1-after.jpg`, desc: `Восстановление Polaroid с потускневшими цветами` },
-      { before: `/images/gallery/instant-2-before.jpg`, after: `/images/gallery/instant-2-after.jpg`, desc: `Реконструкция моментального снимка` },
+      { 
+        before: `/images/gallery/instant-1-before.jpg`, 
+        after: `/images/gallery/instant-1-after.jpg`, 
+        desc: `Восстановление Polaroid с потускневшими цветами`,
+        note: `Polaroid-фотографии уникальны — у них есть свой характер. Мы сохранили этот характер, но убрали потускнение и вернули насыщенность.`,
+      },
+      { 
+        before: `/images/gallery/instant-2-before.jpg`, 
+        after: `/images/gallery/instant-2-after.jpg`, 
+        desc: `Реконструкция моментального снимка`,
+        note: `Снимок был сильно повреждён — белые пятна, выцветание. Реконструкция вернула изображению целостность.`,
+      },
     ],
   },
   xix: {
@@ -53,8 +97,18 @@ const data: Record<string, {
     description: `Технологии сохранения момента до появления пленки -дагерротипы,калотипы,амбротипы,ферротипы,Альбуминовая печать.Мы дали свет и очистили от`,
     caption: `Технологии сохранения момента до появления плёнки`,
     works: [
-      { before: `/images/gallery/xix-1-before.jpg`, after: `/images/gallery/xix-1-after.jpg`, desc: `Реставрация дагерротипа` },
-      { before: `/images/gallery/xix-2-before.jpg`, after: `/images/gallery/xix-2-after.jpg`, desc: `Восстановление амбротипа` },
+      { 
+        before: `/images/gallery/xix-1-before.jpg`, 
+        after: `/images/gallery/xix-1-after.jpg`, 
+        desc: `Реставрация дагерротипа`,
+        note: `Дагерротип — уникальный артефакт. Мы работали с цифровой копией, убирая следы окисления и восстанавливая чёткость серебряной поверхности.`,
+      },
+      { 
+        before: `/images/gallery/xix-2-before.jpg`, 
+        after: `/images/gallery/xix-2-after.jpg`, 
+        desc: `Восстановление амбротипа`,
+        note: `Амбротип требует бережного обращения. Реконструкция утраченных краёв и деталей проводилась с учётом технологии оригинала.`,
+      },
     ],
   },
   color20: {
@@ -62,8 +116,19 @@ const data: Record<string, {
     description: `В свое время это было верхом технологического развития фототехники.Но все же имеет место быть значительно улучшить качество,проявить скрытые детали,увидеть современным взглядом.Мы`,
     caption: `В своё время — верх технологий. Теперь в современном качестве`,
     works: [
-      { before: `/images/gallery/color20-1-before.jpg`, after: `/images/gallery/color20-1-after.jpg`, desc: `Восстановление цветного снимка 1970-х` },
-      { before: `/images/gallery/color20-2-before.jpg`, after: `/images/gallery/color20-2-after.jpg`, desc: `Реставрация выцветшей фотографии` },
+      { 
+        before: `/images/gallery/color20-1-before.jpg`, 
+        after: `/images/gallery/color20-1-after.jpg`, 
+        desc: `Восстановление цветного снимка 1970-х`,
+        note: `Цветная плёнка 1970-х дала характерный оттенок, который со временем исказился. Мы вернули естественность цвета, убрали цветовой шум и повысили детализацию.`,
+        review: `Цвета стали такими, какими я их помню. Как будто снова там, в том летнем дворике.`,
+      },
+      { 
+        before: `/images/gallery/color20-2-before.jpg`, 
+        after: `/images/gallery/color20-2-after.jpg`, 
+        desc: `Реставрация выцветшей фотографии`,
+        note: `Сильное выцветание, потеря контраста, мелкие царапины. Комплексная реставрация вернула фотографии жизнь.`,
+      },
     ],
   },
   bw20: {
@@ -71,8 +136,18 @@ const data: Record<string, {
     description: `Самый большой массив для возвращения.Столетие,ожидающие цвета и четкости момента.Мы дали`,
     caption: `Столетие, ожидающее цвета и чёткости`,
     works: [
-      { before: `/images/gallery/bw20-1-before.jpg`, after: `/images/gallery/bw20-1-after.jpg`, desc: `Колоризация и реставрация портрета 1940-х` },
-      { before: `/images/gallery/bw20-2-before.jpg`, after: `/images/gallery/bw20-2-after.jpg`, desc: `Восстановление чёткости документального снимка` },
+      { 
+        before: `/images/gallery/bw20-1-before.jpg`, 
+        after: `/images/gallery/bw20-1-after.jpg`, 
+        desc: `Колоризация и реставрация портрета 1940-х`,
+        note: `Чёрно-белый портрет был отреставрирован, а затем колоризован с учётом исторических референсов эпохи. Каждый цвет подобран вручную.`,
+      },
+      { 
+        before: `/images/gallery/bw20-2-before.jpg`, 
+        after: `/images/gallery/bw20-2-after.jpg`, 
+        desc: `Восстановление чёткости документального снимка`,
+        note: `Документальная фотография требует точности. Мы восстановили читаемость всех деталей без потери аутентичности.`,
+      },
     ],
   },
   digital: {
@@ -80,8 +155,19 @@ const data: Record<string, {
     description: `Технологии на максималках,но случай решает судьбу запечатленного момента.Мы`,
     caption: `Технологии на максималках, но случай решает судьбу момента`,
     works: [
-      { before: `/images/gallery/digital-1-before.jpg`, after: `/images/gallery/digital-1-after.jpg`, desc: `Восстановление повреждённого JPEG-файла` },
-      { before: `/images/gallery/digital-2-before.jpg`, after: `/images/gallery/digital-2-after.jpg`, desc: `Реконструкция фрагментов снимка` },
+      { 
+        before: `/images/gallery/digital-1-before.jpg`, 
+        after: `/images/gallery/digital-1-after.jpg`, 
+        desc: `Восстановление повреждённого JPEG-файла`,
+        note: `Файл был повреждён при передаче — артефакты сжатия, потеря блоков изображения. Мы восстановили структуру файла и убрали цифровые дефекты.`,
+      },
+      { 
+        before: `/images/gallery/digital-2-before.jpg`, 
+        after: `/images/gallery/digital-2-after.jpg`, 
+        desc: `Реконструкция фрагментов снимка`,
+        note: `После сбоя носителя часть файла оказалась недоступна. Реконструкция вернула недостающие фрагменты.`,
+        review: `Думал, фото с похорон отца потеряны навсегда. Вы вернули их. Низкий поклон.`,
+      },
     ],
   },
 };
@@ -90,6 +176,11 @@ export default function CategoryPage() {
   const params = useParams();
   const slug = params.slug as string;
   const cat = data[slug];
+
+  const [lightbox, setLightbox] = useState<{
+    open: boolean;
+    work: typeof cat.works[0] | null;
+  }>({ open: false, work: null });
 
   if (!cat) {
     return (
@@ -106,6 +197,7 @@ export default function CategoryPage() {
 
   return (
     <div className="bg-[#A7D48D]">
+      {/* ЗАГОЛОВОК */}
       <section className="pt-24 pb-12 px-4">
         <div className="max-w-6xl mx-auto">
           <Link
@@ -122,29 +214,56 @@ export default function CategoryPage() {
           </div>
 
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 text-center">{cat.title}</h1>
-          <p className="text-lg text-gray-700 text-center max-w-2xl mx-auto leading-relaxed whitespace-pre-line">
+          <p className="text-lg text-gray-700 text-center max-w-3xl mx-auto leading-relaxed whitespace-pre-line">
             {cat.description}
           </p>
         </div>
       </section>
 
+      {/* РАБОТЫ */}
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
-          <p className="text-center text-gray-600 text-sm mb-12 max-w-xl mx-auto">
+          <p className="text-center text-gray-600 text-sm mb-12 max-w-2xl mx-auto">
             {cat.caption}
           </p>
 
           <div className="space-y-20">
-            {cat.works.map((work, idx) => (
-              <div key={idx} className="bg-white rounded-2xl border border-gray-100 p-4 md:p-8">
-                <BeforeAfterSlider before={work.before} after={work.after} />
-                <p className="text-center text-gray-500 mt-4 text-sm">{work.desc}</p>
-              </div>
-            ))}
+            {cat.works.map((work, idx) => {
+              const teaserText = work.note || work.review || "";
+              const teaser = teaserText.length > 120 ? teaserText.slice(0, 120) + "..." : teaserText;
+
+              return (
+                <div key={idx} className="bg-white rounded-2xl border border-gray-100 p-4 md:p-8">
+                  {/* Кликабельный слайдер */}
+                  <div 
+                    className="cursor-pointer"
+                    onClick={() => setLightbox({ open: true, work })}
+                  >
+                    <BeforeAfterSlider before={work.before} after={work.after} />
+                  </div>
+
+                  <p className="text-center text-gray-500 mt-6 text-base">{work.desc}</p>
+
+                  {/* Тизер текста */}
+                  {teaser && (
+                    <div className="mt-4 text-center">
+                      <p className="text-gray-400 text-sm inline">{teaser}</p>
+                      <button
+                        onClick={() => setLightbox({ open: true, work })}
+                        className="text-black text-sm font-medium ml-2 hover:underline"
+                      >
+                        Подробнее →
+                      </button>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
 
+      {/* КНОПКА ЗАКАЗА */}
       <section className="py-16 px-4 text-center">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Хотите так же?</h2>
@@ -157,6 +276,19 @@ export default function CategoryPage() {
           </Link>
         </div>
       </section>
+
+      {/* ЛАЙТБОКС */}
+      {lightbox.work && (
+        <Lightbox
+          isOpen={lightbox.open}
+          onClose={() => setLightbox({ open: false, work: null })}
+          before={lightbox.work.before}
+          after={lightbox.work.after}
+          desc={lightbox.work.desc}
+          note={lightbox.work.note}
+          review={lightbox.work.review}
+        />
+      )}
     </div>
   );
 }
