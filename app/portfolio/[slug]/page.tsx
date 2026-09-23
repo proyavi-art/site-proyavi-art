@@ -234,26 +234,19 @@ export default function CategoryPage() {
 
               return (
                 <div key={idx} className="bg-white rounded-2xl border border-gray-100 p-4 md:p-8">
-                  {/* Кликабельный слайдер */}
-                  <div 
-                    className="cursor-pointer"
-                    onClick={() => setLightbox({ open: true, work })}
-                  >
-                    <BeforeAfterSlider before={work.before} after={work.after} />
-                  </div>
+                  <BeforeAfterSlider 
+                    before={work.before} 
+                    after={work.after} 
+                    onImageClick={() => setLightbox({ open: true, work })}
+                  />
 
                   <p className="text-center text-gray-500 mt-6 text-base">{work.desc}</p>
 
                   {/* Тизер текста */}
                   {teaser && (
                     <div className="mt-4 text-center">
-                      <p className="text-gray-400 text-sm inline">{teaser}</p>
-                      <button
-                        onClick={() => setLightbox({ open: true, work })}
-                        className="text-black text-sm font-medium ml-2 hover:underline"
-                      >
-                        Подробнее →
-                      </button>
+                      <p className="text-gray-400 text-sm">{teaser}</p>
+                      <p className="text-gray-300 text-xs mt-1">Нажмите на фото, чтобы увидеть полностью</p>
                     </div>
                   )}
                 </div>
