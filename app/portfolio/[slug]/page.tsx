@@ -47,7 +47,9 @@ const data: Record<string, {
         after: `/images/gallery/places-1-after.jpg`, 
         desc: `Восстановление пейзажа с выцветшими цветами`,
         note: `Пейзаж снят на раннюю цветную плёнку, которая сильно выцвела. Мы восстановили насыщенность зелени, глубину неба и детали переднего плана.`,
-      },
+       },
+    ],
+  },
       { 
         before: `/images/gallery/places-2-before.jpg`, 
         after: `/images/gallery/places-2-after.jpg`, 
