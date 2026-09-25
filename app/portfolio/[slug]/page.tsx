@@ -264,7 +264,7 @@ export default function CategoryPage() {
       {/* КНОПКА ЗАКАЗА */}
       <section className="py-16 px-4 text-center">
         <div className="max-w-2xl mx-auto">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Вас интересно увидеть ясно мгновения прощлого?- </h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Вас интересно увидеть ясно мгновения прошлого?- </h2>
           <p className="text-gray-700 mb-8">Отправьте фотографию на оценку — мы вернём ваше мгновение.</p>
           <Link
             href="/uslugi"
