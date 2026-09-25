@@ -46,8 +46,8 @@ const data: Record<string, {
       {
         before: `/images/gallery/places-1-before.jpg`,
         after: `/images/gallery/places-1-after.jpg`,
-        desc: `Восстановление пейзажа с выцветшими цветами`,
-        note: `Пейзаж снят на раннюю цветную плёнку, которая сильно выцвела. Мы восстановили насыщенность зелени, глубину неба и детали переднего плана.`,
+        desc: `Первомайская демонстрация. 1980 г.`,
+        note: `Праздник труда и весны - 1 Мая! `,
       },
       {
         before: `/images/gallery/places-2-before.jpg`,
@@ -265,7 +265,7 @@ export default function CategoryPage() {
       <section className="py-16 px-4 text-center">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Интересно увидеть ясно мгновения прошлого? </h2>
-          <p className="text-gray-700 mb-8">Отправьте фотографию на оценку — мы вернём ваше мгновение.</p>
+          <p className="text-gray-700 mb-8">Отправьте фотографию на ProЯвление — мы вернём ваше мгновение.</p>
           <Link
             href="/uslugi"
             className="inline-block px-10 py-4 bg-black text-white rounded-xl font-medium hover:bg-gray-800 transition-colors"
