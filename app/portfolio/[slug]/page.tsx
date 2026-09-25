@@ -18,41 +18,40 @@ const data: Record<string, {
 Как правило, чем старше фотография, тем больше деталей утрачено — из-за времени и несовершенства технологий прошлого. Но даже спустя десятилетия что-то всё ещё можно вернуть.`,
     caption: `С разрешения наших заказчиков, мы публикуем данные примеры выполненных нами работ.`,
     works: [
-      { 
-        before: `/images/gallery/family-1-before.jpg`, 
-        after: `/images/gallery/family-1-after.jpg`, 
+      {
+        before: `/images/gallery/family-1-before.jpg`,
+        after: `/images/gallery/family-1-after.jpg`,
         desc: `Восстановление семейного портрета конца 1940-х годов. Казахстан, Целиноградская обл.`,
-        note: `Послевоенная фотография семьи Офсянниковых с внучкой, дочерью и зятем. Сосотояние, в котором к нам поступила данная фотография было удовлетворительным, что позволило достаточно точно восстановить сохраненный момент. Не ждите, пока единственный источник момента потеряет безвозвратно свою информацию. Сохраните.`,
-        review: ``,
+        note: `Послевоенная фотография семьи Офсянниковых с внучкой, дочерью и зятем. Состояние, в котором к нам поступила данная фотография было удовлетворительным, что позволило достаточно точно восстановить сохраненный момент. Не ждите, пока единственный источник момента потеряет безвозвратно свою информацию. Сохраните.`,
       },
-      { 
-        before: `/images/gallery/family-2-before.jpg`, 
-        after: `/images/gallery/family-2-after.jpg`, 
+      {
+        before: `/images/gallery/family-2-before.jpg`,
+        after: `/images/gallery/family-2-after.jpg`,
         desc: `Юбилей Агаповых Дмитрия и Феодосьи. Золотая свадьба. 1970-е.`,
-        note: `Фотоснимок выполнен на любительскую камеру с явными дефктами по выдержки. Косые лучи предзакатного Солнца засветили большую часть фотографии. Оцифровка фотографии производилась цифровой камерой Nikon 5z в специальных условиях для получения максимального количествва информации сохраненной на фотографии. Мы вернули мгновение вечера во всех его цветах.  `,
+        note: `Фотоснимок выполнен на любительскую камеру с явными дефектами по выдержке. Косые лучи предзакатного Солнца засветили большую часть фотографии. Оцифровка фотографии производилась цифровой камерой Nikon Z5 в специальных условиях для получения максимального количества информации сохраненной на фотографии. Мы вернули мгновение вечера во всех его цветах.`,
       },
-       { 
-        before: `/images/gallery/family-3-before.jpg`, 
-        after: `/images/gallery/family-3-after.jpg`, 
+      {
+        before: `/images/gallery/family-3-before.jpg`,
+        after: `/images/gallery/family-3-after.jpg`,
         desc: `Студийная фотография четы Юровых с внуками и внучкой. 1986 г.`,
-        note: `Фотографии выполненные в специализированных фотостудиях СССР по качество значительно отличаются от любительских по освещению и выдержке и являлись эталоном фотоснимка. В большинстве случаев. При всей своей сохранности, данная фотография имела расмытость контуров. Мы вернули четкость изображению в том числе. `,
+        note: `Фотографии выполненные в специализированных фотостудиях СССР по качеству значительно отличаются от любительских по освещению и выдержке и являлись эталоном фотоснимка. В большинстве случаев. При всей своей сохранности, данная фотография имела размытость контуров. Мы вернули четкость изображению в том числе.`,
+      },
+    ],
   },
   places: {
     title: `Места и события`,
     description: `Вы снова там.Что бы вспомнить эмоции и`,
     caption: `Памятное событие или место,куда хотелось бы вернуться`,
     works: [
-      { 
-        before: `/images/gallery/places-1-before.jpg`, 
-        after: `/images/gallery/places-1-after.jpg`, 
+      {
+        before: `/images/gallery/places-1-before.jpg`,
+        after: `/images/gallery/places-1-after.jpg`,
         desc: `Восстановление пейзажа с выцветшими цветами`,
         note: `Пейзаж снят на раннюю цветную плёнку, которая сильно выцвела. Мы восстановили насыщенность зелени, глубину неба и детали переднего плана.`,
-       },
-    ],
-  },
-      { 
-        before: `/images/gallery/places-2-before.jpg`, 
-        after: `/images/gallery/places-2-after.jpg`, 
+      },
+      {
+        before: `/images/gallery/places-2-before.jpg`,
+        after: `/images/gallery/places-2-after.jpg`,
         desc: `Реставрация снимка с праздника`,
         note: `Снимок с семейного торжества — повреждён водой и временем. Восстановлены лица, детали интерьера, цветовая гамма.`,
         review: `Это единственная фотография с нашей свадьбы, которая осталась. Теперь она снова жива.`,
@@ -64,15 +63,15 @@ const data: Record<string, {
     description: `Взгляд,улыбка,локон волос близкого вам человека -то,за что цепляется Ваша память.Возможно,это будет яркая вспышка -`,
     caption: `Взгляд, улыбка, локон волос — то, за что цепляется память`,
     works: [
-      { 
-        before: `/images/gallery/portrait-1-before.jpg`, 
-        after: `/images/gallery/portrait-1-after.jpg`, 
+      {
+        before: `/images/gallery/portrait-1-before.jpg`,
+        after: `/images/gallery/portrait-1-after.jpg`,
         desc: `Восстановление детального портрета`,
         note: `Портретная фотография требует особого внимания к мелочам — текстуре кожи, бликам в глазах, мягкости света. Каждый элемент был восстановлен вручную.`,
       },
-      { 
-        before: `/images/gallery/portrait-2-before.jpg`, 
-        after: `/images/gallery/portrait-2-after.jpg`, 
+      {
+        before: `/images/gallery/portrait-2-before.jpg`,
+        after: `/images/gallery/portrait-2-after.jpg`,
         desc: `Реконструкция повреждённого снимка`,
         note: `Фотография была разорвана пополам и склеена скотчем. Мы убрали следы скотча, восстановили разрыв и вернули единство изображению.`,
         review: `Бабушка расплакалась, когда увидела. Это бесценно.`,
@@ -84,15 +83,15 @@ const data: Record<string, {
     description: `Момент выхвачен и тут же проявлен на polaroid снимке.Но много деталей не видно.Увидите полностью`,
     caption: `Момент выхвачен на Polaroid. Увидите полностью`,
     works: [
-      { 
-        before: `/images/gallery/instant-1-before.jpg`, 
-        after: `/images/gallery/instant-1-after.jpg`, 
+      {
+        before: `/images/gallery/instant-1-before.jpg`,
+        after: `/images/gallery/instant-1-after.jpg`,
         desc: `Восстановление Polaroid с потускневшими цветами`,
         note: `Polaroid-фотографии уникальны — у них есть свой характер. Мы сохранили этот характер, но убрали потускнение и вернули насыщенность.`,
       },
-      { 
-        before: `/images/gallery/instant-2-before.jpg`, 
-        after: `/images/gallery/instant-2-after.jpg`, 
+      {
+        before: `/images/gallery/instant-2-before.jpg`,
+        after: `/images/gallery/instant-2-after.jpg`,
         desc: `Реконструкция моментального снимка`,
         note: `Снимок был сильно повреждён — белые пятна, выцветание. Реконструкция вернула изображению целостность.`,
       },
@@ -103,15 +102,15 @@ const data: Record<string, {
     description: `Технологии сохранения момента до появления пленки -дагерротипы,калотипы,амбротипы,ферротипы,Альбуминовая печать.Мы дали свет и очистили от`,
     caption: `Технологии сохранения момента до появления плёнки`,
     works: [
-      { 
-        before: `/images/gallery/xix-1-before.jpg`, 
-        after: `/images/gallery/xix-1-after.jpg`, 
+      {
+        before: `/images/gallery/xix-1-before.jpg`,
+        after: `/images/gallery/xix-1-after.jpg`,
         desc: `Реставрация дагерротипа`,
         note: `Дагерротип — уникальный артефакт. Мы работали с цифровой копией, убирая следы окисления и восстанавливая чёткость серебряной поверхности.`,
       },
-      { 
-        before: `/images/gallery/xix-2-before.jpg`, 
-        after: `/images/gallery/xix-2-after.jpg`, 
+      {
+        before: `/images/gallery/xix-2-before.jpg`,
+        after: `/images/gallery/xix-2-after.jpg`,
         desc: `Восстановление амбротипа`,
         note: `Амбротип требует бережного обращения. Реконструкция утраченных краёв и деталей проводилась с учётом технологии оригинала.`,
       },
@@ -122,16 +121,16 @@ const data: Record<string, {
     description: `В свое время это было верхом технологического развития фототехники.Но все же имеет место быть значительно улучшить качество,проявить скрытые детали,увидеть современным взглядом.Мы`,
     caption: `В своё время — верх технологий. Теперь в современном качестве`,
     works: [
-      { 
-        before: `/images/gallery/color20-1-before.jpg`, 
-        after: `/images/gallery/color20-1-after.jpg`, 
+      {
+        before: `/images/gallery/color20-1-before.jpg`,
+        after: `/images/gallery/color20-1-after.jpg`,
         desc: `Восстановление цветного снимка 1970-х`,
         note: `Цветная плёнка 1970-х дала характерный оттенок, который со временем исказился. Мы вернули естественность цвета, убрали цветовой шум и повысили детализацию.`,
         review: `Цвета стали такими, какими я их помню. Как будто снова там, в том летнем дворике.`,
       },
-      { 
-        before: `/images/gallery/color20-2-before.jpg`, 
-        after: `/images/gallery/color20-2-after.jpg`, 
+      {
+        before: `/images/gallery/color20-2-before.jpg`,
+        after: `/images/gallery/color20-2-after.jpg`,
         desc: `Реставрация выцветшей фотографии`,
         note: `Сильное выцветание, потеря контраста, мелкие царапины. Комплексная реставрация вернула фотографии жизнь.`,
       },
@@ -142,15 +141,15 @@ const data: Record<string, {
     description: `Самый большой массив для возвращения.Столетие,ожидающие цвета и четкости момента.Мы дали`,
     caption: `Столетие, ожидающее цвета и чёткости`,
     works: [
-      { 
-        before: `/images/gallery/bw20-1-before.jpg`, 
-        after: `/images/gallery/bw20-1-after.jpg`, 
+      {
+        before: `/images/gallery/bw20-1-before.jpg`,
+        after: `/images/gallery/bw20-1-after.jpg`,
         desc: `Колоризация и реставрация портрета 1940-х`,
         note: `Чёрно-белый портрет был отреставрирован, а затем колоризован с учётом исторических референсов эпохи. Каждый цвет подобран вручную.`,
       },
-      { 
-        before: `/images/gallery/bw20-2-before.jpg`, 
-        after: `/images/gallery/bw20-2-after.jpg`, 
+      {
+        before: `/images/gallery/bw20-2-before.jpg`,
+        after: `/images/gallery/bw20-2-after.jpg`,
         desc: `Восстановление чёткости документального снимка`,
         note: `Документальная фотография требует точности. Мы восстановили читаемость всех деталей без потери аутентичности.`,
       },
@@ -161,15 +160,15 @@ const data: Record<string, {
     description: `Технологии на максималках,но случай решает судьбу запечатленного момента.Мы`,
     caption: `Технологии на максималках, но случай решает судьбу момента`,
     works: [
-      { 
-        before: `/images/gallery/digital-1-before.jpg`, 
-        after: `/images/gallery/digital-1-after.jpg`, 
+      {
+        before: `/images/gallery/digital-1-before.jpg`,
+        after: `/images/gallery/digital-1-after.jpg`,
         desc: `Восстановление повреждённого JPEG-файла`,
         note: `Файл был повреждён при передаче — артефакты сжатия, потеря блоков изображения. Мы восстановили структуру файла и убрали цифровые дефекты.`,
       },
-      { 
-        before: `/images/gallery/digital-2-before.jpg`, 
-        after: `/images/gallery/digital-2-after.jpg`, 
+      {
+        before: `/images/gallery/digital-2-before.jpg`,
+        after: `/images/gallery/digital-2-after.jpg`,
         desc: `Реконструкция фрагментов снимка`,
         note: `После сбоя носителя часть файла оказалась недоступна. Реконструкция вернула недостающие фрагменты.`,
         review: `Думал, фото с похорон отца потеряны навсегда. Вы вернули их. Низкий поклон.`,
@@ -240,9 +239,9 @@ export default function CategoryPage() {
 
               return (
                 <div key={idx} className="bg-white rounded-2xl border border-gray-100 p-4 md:p-8">
-                  <BeforeAfterSlider 
-                    before={work.before} 
-                    after={work.after} 
+                  <BeforeAfterSlider
+                    before={work.before}
+                    after={work.after}
                     onImageClick={() => setLightbox({ open: true, work })}
                   />
 
