@@ -65,7 +65,7 @@ export default function Portfolio() {
       {/* ЗАГОЛОВОК */}
       <section className="pt-24 pb-12 px-4 text-center">
         <div className="max-w-3xl mx-auto">
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4">Мы вернули.</h1>
+          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4">Мы вернули</h1>
         </div>
       </section>
 
@@ -150,7 +150,7 @@ export default function Portfolio() {
         <div className="max-w-2xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Сохраните прошлое настоящим.</h2>
           <p className="text-gray-700 text-lg mb-10">
-            Убрать шум. Оставить свет. Вернуть мгновение.
+            Мы благодарны тем, кто сохранил эти моменты, — чтобы спустя десятилетия мы могли увидеть их, сохранить и передать дальше, тем, кто будет после нас.
           </p>
           <Link
             href="/uslugi"
