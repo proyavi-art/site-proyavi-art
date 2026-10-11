@@ -17,6 +17,32 @@ export default function ONas() {
         </h1>
         <div className="flex-1 h-px bg-white/30" />
       </div>
+
+      {/* Контакты */}
+      <div className="mt-12 flex flex-col sm:flex-row items-center gap-6 sm:gap-10">
+        <a
+          href="mailto:moment@proyavi.art"
+          className="text-sm text-white/70 hover:text-white transition-colors tracking-wide"
+        >
+          moment@proyavi.art
+        </a>
+        <a
+          href="https://t.me/proyavi137art"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-sm text-white/70 hover:text-white transition-colors tracking-wide"
+        >
+          Telegram
+        </a>
+        <a
+          href="https://www.youtube.com/channel/UC9M9c_nvGwuS3cG5lVY9q-A"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-sm text-white/70 hover:text-white transition-colors tracking-wide"
+        >
+          YouTube
+        </a>
+      </div>
     </div>
   );
 }
