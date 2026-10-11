@@ -285,6 +285,32 @@ export default function Uslugi() {
               />
               <input type="hidden" name="captcha_result" value={captcha.result} />
             </div>
+			</div>
+
+            {/* ЧЕКБОКС — вставить сюда */}
+            <div className="flex items-start gap-3">
+              <input
+                id="privacy"
+                name="privacy"
+                type="checkbox"
+                required
+                className="mt-1 w-4 h-4 rounded border-gray-300 text-black focus:ring-black"
+              />
+              <label htmlFor="privacy" className="text-sm text-gray-500 leading-relaxed">
+                Я согласен на обработку{" "}
+                <Link href="/politika-konfidencialnosti" target="_blank" className="text-gray-700 underline hover:text-black">
+                  персональных данных
+                </Link>
+              </label>
+            </div>
+
+            <button
+              type="submit"
+              disabled={loading}
+              className="w-full py-4 bg-black text-white rounded-xl font-medium hover:bg-gray-800 transition-colors disabled:opacity-50"
+            >
+              {loading ? "Отправка..." : "Отправить заявку"}
+            </button>
 
             <button
               type="submit"
