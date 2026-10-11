@@ -285,9 +285,8 @@ export default function Uslugi() {
               />
               <input type="hidden" name="captcha_result" value={captcha.result} />
             </div>
-			</div>
 
-            {/* ЧЕКБОКС — вставить сюда */}
+            {/* ЧЕКБОКС */}
             <div className="flex items-start gap-3">
               <input
                 id="privacy"
@@ -303,14 +302,6 @@ export default function Uslugi() {
                 </Link>
               </label>
             </div>
-
-            <button
-              type="submit"
-              disabled={loading}
-              className="w-full py-4 bg-black text-white rounded-xl font-medium hover:bg-gray-800 transition-colors disabled:opacity-50"
-            >
-              {loading ? "Отправка..." : "Отправить заявку"}
-            </button>
 
             <button
               type="submit"
