@@ -1,63 +1,69 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 
 const categories = [
   {
     slug: "family",
     tag: "Реставрация",
     title: "Семейные архивы",
-    text: "Сохраните для себя и своих потомков моменты жизни родных и близких в привычном восприятии настоящего. ",
+    text: "Сохраните для себя и своих потомков моменты жизни родных и близких в привычном восприятии",
     img: "/images/gallery/family.jpg",
   },
   {
     slug: "places",
     tag: "Реставрация",
     title: "Места и события",
-    text: "Вы снова там. Что бы вспомнить эмоции и теплоту.",
+    text: "Вы снова там.Что бы вспомнить эмоции и",
     img: "/images/gallery/places.jpg",
   },
   {
     slug: "portrait",
     tag: "Реставрация",
     title: "Портрет",
-    text: "Взгляд, улыбка, локон волос близкого вам человека - то, за что цепляется Ваша память. Возможно, это будет яркая вспышка воспоминания - Явь.",
+    text: "Взгляд,улыбка,локон волос близкого вам человека -то,за что цепляется Ваша память.Возможно,это будет яркая вспышка -",
     img: "/images/gallery/portrait.jpg",
   },
   {
     slug: "instant",
     tag: "Реставрация",
     title: "Моментальные фотоснимки",
-    text: "Момент выхвачен и тут же проявлен на polaroid снимке. Но много деталей не видно. Увидите полностью.",
+    text: "Момент выхвачен и тут же проявлен на polaroid снимке.Но много деталей не видно.Увидите полностью",
     img: "/images/gallery/instant.jpg",
   },
   {
     slug: "xix",
     tag: "Реставрация",
-    title: "Заря фотографии. 19 век",
-    text: "Технологии сохранения момента до появления пленки - дагерротипы, калотипы, амбротипы, ферротипы, альбуминовая печать. Мы дали свет и очистили от шума.",
+    title: "Заря фотографии.XIX век",
+    text: "Технологии сохранения момента до появления пленки -дагерротипы,калотипы,амбротипы,ферротипы,Альбуминовая печать.Мы дали свет и очистили от",
     img: "/images/gallery/xix.jpg",
   },
   {
     slug: "color20",
     tag: "Реставрация",
-    title: "Цветные фото 20-го века",
-    text: "В свое время это было верхом технологического развития фототехники. Но все же имеет место быть значительно улучшить качество, проявить скрытые детали, увидеть современным взглядом. Мы показали.",
+    title: "Цветные фото 20века",
+    text: "В свое время это было верхом технологического развития фототехники.Но все же имеет место быть значительно улучшить качество,проявить скрытые детали,увидеть современным взглядом.Мы",
     img: "/images/gallery/color20.jpg",
   },
   {
     slug: "bw20",
     tag: "Реставрация",
-    title: "Черно-белые фото 20-го века",
-    text: "Самый большой массив для возвращения.Столетие, ожидающие цвета и четкости момента. Мы дали цвет.",
+    title: "Черно-белые фото 20века",
+    text: "Самый большой массив для возвращения.Столетие,ожидающие цвета и четкости момента.Мы дали",
     img: "/images/gallery/bw20.jpg",
   },
   {
     slug: "digital",
     tag: "Реставрация",
     title: "Цифровые фотографии",
-    text: "Технологии на максималках, но случай решает судьбу запечатленного момента. Мы исправили.",
+    text: "Технологии на максималках,но случай решает судьбу запечатленного момента.Мы",
     img: "/images/gallery/digital.jpg",
   },
 ];
+
+export const metadata: Metadata = {
+  title: "Галерея — примеры реставрации фотографий до и после",
+  description: "Примеры работ ProЯвь: реставрация семейных архивов, портретов, Polaroid, фото XIX века и цифровых снимков. Смотрите, как мы возвращаем свет мгновениям.",
+};
 
 export default function Portfolio() {
   return (
@@ -65,7 +71,7 @@ export default function Portfolio() {
       {/* ЗАГОЛОВОК */}
       <section className="pt-24 pb-12 px-4 text-center">
         <div className="max-w-3xl mx-auto">
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4">Мы вернули</h1>
+          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4">Мы вернули.</h1>
         </div>
       </section>
 
@@ -79,7 +85,7 @@ export default function Portfolio() {
           </div>
 
           <p className="text-center text-gray-700 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Из семейных фотоархивов, мгновения, сохранившие взляд улыбку близкого человека или родственника. Памятное событие или место ,куда хотелось бы вернуться.
+            Из семейных фотоархивов,мгновения,сохранившие взляд улыбку близкого человека или родственника.Памятное событие или место,куда хотелось бы
           </p>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -92,8 +98,9 @@ export default function Portfolio() {
                 <div className="overflow-hidden bg-gray-100">
                   <img
                     src={cat.img}
-                    alt={cat.title}
-                    className="w-full h-auto object-contain mx-auto"
+                    alt={`Реставрация фото — ${cat.title}`}
+                    title={`Перейти в раздел «${cat.title}»`}
+                    className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="p-6">
@@ -117,7 +124,7 @@ export default function Portfolio() {
           </div>
 
           <p className="text-center text-gray-700 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Мы сотрудничаем с музеями, архивами и организациями по восстановлению оцифрованных изображений. Для будущего, с теплотой и достоверностью. 
+            Мы сотрудничаем с музеями,архивами и организациями по восстановлению оцифрованных изображений.Для будущего,с теплотой и
           </p>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -130,8 +137,9 @@ export default function Portfolio() {
                 <div className="overflow-hidden bg-gray-100">
                   <img
                     src={cat.img}
-                    alt={cat.title}
-                    className="w-full h-auto object-contain mx-auto"
+                    alt={`Реставрация фото — ${cat.title}`}
+                    title={`Перейти в раздел «${cat.title}»`}
+                    className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="p-6">
@@ -150,7 +158,7 @@ export default function Portfolio() {
         <div className="max-w-2xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Сохраните прошлое настоящим.</h2>
           <p className="text-gray-700 text-lg mb-10">
-            Мы благодарны тем, кто сохранил эти моменты, — чтобы спустя десятилетия мы могли увидеть их, сохранить и передать дальше, тем, кто будет после нас.
+            Убрать шум. Оставить свет. Вернуть мгновение.
           </p>
           <Link
             href="/uslugi"
