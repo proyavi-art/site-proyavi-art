@@ -1,10 +1,4 @@
 import Link from "next/link";
-import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "О нас — ProЯвь. Мы есть свет.",
-  description: "ProЯвь — AI-лаборатория реставрации и реконструкции фотографий. Мы возвращаем свет мгновениям, сохраняя теплоту и уважение к оригиналу.",
-};
 
 export default function ONas() {
   return (
