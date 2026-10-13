@@ -14,7 +14,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
-      <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
         <Link href="/" className="flex items-center">
           <img
             src="/images/logo.png"
@@ -23,13 +23,44 @@ export default function Header() {
           />
         </Link>
 
-        <nav className="hidden md:flex gap-8">
-          {links.map((l) => (
-            <Link key={l.href} href={l.href} className="text-sm font-medium text-gray-600 hover:text-black transition-colors">
-              {l.label}
-            </Link>
-          ))}
-        </nav>
+        {/* Десктоп: меню + контакты */}
+        <div className="hidden md:flex items-center gap-8">
+          <nav className="flex gap-6">
+            {links.map((l) => (
+              <Link key={l.href} href={l.href} className="text-sm font-medium text-gray-600 hover:text-black transition-colors">
+                {l.label}
+              </Link>
+            ))}
+          </nav>
+
+          <div className="flex items-center gap-4 pl-6 border-l border-gray-200">
+            <a
+              href="mailto:moment@proyavi.art"
+              className="text-sm text-gray-500 hover:text-black transition-colors"
+              title="Email"
+            >
+              Email
+            </a>
+            <a
+              href="https://t.me/proyavi137art"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-gray-500 hover:text-black transition-colors"
+              title="Telegram"
+            >
+              TG
+            </a>
+            <a
+              href="https://www.youtube.com/channel/UC9M9c_nvGwuS3cG5lVY9q-A"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-gray-500 hover:text-black transition-colors"
+              title="YouTube"
+            >
+              YT
+            </a>
+          </div>
+        </div>
 
         <button
           className="md:hidden p-2"
@@ -46,6 +77,7 @@ export default function Header() {
         </button>
       </div>
 
+      {/* Мобильное меню */}
       {open && (
         <div className="md:hidden border-t border-gray-100 px-4 py-4 space-y-3 bg-white">
           {links.map((l) => (
@@ -53,6 +85,11 @@ export default function Header() {
               {l.label}
             </Link>
           ))}
+          <div className="pt-3 border-t border-gray-100 flex gap-4">
+            <a href="mailto:moment@proyavi.art" className="text-sm text-gray-500">Email</a>
+            <a href="https://t.me/proyavi137art" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-500">Telegram</a>
+            <a href="https://www.youtube.com/channel/UC9M9c_nvGwuS3cG5lVY9q-A" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-500">YouTube</a>
+          </div>
         </div>
       )}
     </header>
