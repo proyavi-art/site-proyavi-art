@@ -1,12 +1,6 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Услуги и цены — реставрация, реконструкция, колоризация фото",
-  description: "Комплексное восстановление фотографий от 1 500 ₽. Реставрация, реконструкция утраченных фрагментов, колоризация чёрно-белых снимков. Отправьте фото на бесплатную оценку.",
-};
 
 function generateCaptcha() {
   const a = Math.floor(Math.random() * 10) + 1;
