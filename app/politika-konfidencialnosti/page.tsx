@@ -1,8 +1,9 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Политика конфиденциальности — ProЯвь",
-  description: "Политика обработки персональных данных сайта ProЯвь.",
+  description: "Политика обработки персональных данных сайта ProЯвь. Мы защищаем ваши данные и фотографии.",
 };
 
 export default function Privacy() {
