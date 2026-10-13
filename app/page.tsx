@@ -1,6 +1,12 @@
 import Link from "next/link";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import HeroSlider from "@/components/HeroSlider";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Восстановление старых фотографий — реставрация и реконструкция",
+  description: "ProЯвь возвращает свет мгновениям. Реставрация старых фото, реконструкция утраченных фрагментов, колоризация чёрно-белых снимков. Сохраните память для потомков.",
+};
 
 export default function Home() {
   return (
@@ -9,7 +15,7 @@ export default function Home() {
       <HeroSlider>
         <img
           src="/images/logo-white.png"
-          alt="ProЯвь"
+          alt="ProЯвь — логотип AI-лаборатории реставрации фото"
           className="mx-auto mb-6 w-auto max-w-[280px] md:max-w-[400px] h-auto drop-shadow-lg"
         />
         <p className="text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto mb-12 leading-relaxed">
@@ -55,7 +61,6 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">Что мы делаем</h2>
 
-          {/* 4 карточки */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <article className="bg-white p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-shadow">
               <h3 className="text-xl font-semibold mb-3">Реставрация</h3>
@@ -176,8 +181,8 @@ export default function Home() {
       {/* CTA */}
       <section className="py-24 px-4 bg-black text-white text-center">
         <div className="max-w-2xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">Сохраните прошлое настоящим.</h2>
-          <p className="text-gray-400 text-lg mb-6 leading-relaxed">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Сохраните прошлое настоящим.</h2>
+          <p className="text-gray-400 text-lg mb-10">
             ProЯвь возвращает свет мгновению, но решить, что это мгновение достойно быть возвращённым, можете только Вы.
           </p>
           <p className="text-gray-300 text-base mb-10 tracking-wide">
