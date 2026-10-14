@@ -4,7 +4,7 @@ import HeroSlider from "@/components/HeroSlider";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Восстановление старых фотографий — реставрация и реконструкция",
+  title: "Восстановление фотографий любых типов — реставрация и реконструкция",
   description: "ProЯвь возвращает свет мгновениям. Реставрация старых фото, реконструкция утраченных фрагментов, колоризация чёрно-белых снимков. Сохраните память для потомков.",
 };
 
@@ -15,15 +15,15 @@ export default function Home() {
       <HeroSlider>
         <img
           src="/images/logo-white.png"
-          alt="ProЯвь — логотип AI-лаборатории реставрации фото"
+          alt="ProЯвь — логотип AI-лаборатории реставрации изображений"
           className="mx-auto mb-6 w-auto max-w-[280px] md:max-w-[400px] h-auto drop-shadow-lg"
         />
         <p className="text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto mb-12 leading-relaxed">
           Территория возвращённых моментов памяти.
           <br />
-          Реставрация и реконструкция фотографий инструментами AI, но с теплотой и уважением к оригиналу.
+          Реставрация и реконструкция фотографий любых типов инструментами AI, но с теплотой и уважением к оригиналу.
           <br />
-          Мы убираем шум и оставляем свет.
+          Мы убираем шум, оставляем свет.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
@@ -81,8 +81,8 @@ export default function Home() {
             <article className="bg-white p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-shadow">
               <h3 className="text-xl font-semibold mb-3">Колоризация</h3>
               <p className="text-gray-500 leading-relaxed">
-                Возвращаем естественную цветовую палитру, свет, объём
-                и эмоциональную тональность эпохи.
+                Возвращаем естественную цветовую палитру, свет, объём, резкость
+                и эмоциональную тональность момента.
               </p>
             </article>
 
@@ -90,7 +90,7 @@ export default function Home() {
               <h3 className="text-xl font-semibold mb-3">Контроль специалиста</h3>
               <p className="text-gray-500 leading-relaxed">
                 AI ускоряет работу, но каждое ключевое решение принимает человек.
-                Последнее слово всегда остаётся за реставратором.
+                Завершающее действие всегда остаётся за реставратором.
               </p>
             </article>
           </div>
@@ -109,7 +109,7 @@ export default function Home() {
             </p>
             <p className="text-gray-500 leading-relaxed">
               Она пробуждает яркие воспоминания или создаёт ощущение присутствия —
-              будто между вами и прошлым снова исчезает время.
+              будто вы находитесь в том моменте.
             </p>
             <p className="text-gray-900 font-medium leading-relaxed">
               Без пластика и синтетики.
