@@ -13,6 +13,9 @@ export default function Home() {
     <>
       {/* HERO со слайдером фонов */}
       <HeroSlider>
+        <h1 className="sr-only">
+          Реставрация и реконструкция фотографий любых типов
+        </h1>
         <img
           src="/images/logo-white.png"
           alt="ProЯвь — логотип AI-лаборатории реставрации изображений"
