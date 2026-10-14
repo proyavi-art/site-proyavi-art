@@ -11,17 +11,36 @@ export const metadata: Metadata = {
   },
   description: "Возвращаем моменты памяти. Профессиональная реставрация старых фотографий с помощью искусственного интеллекта. Удаляем царапины, восстанавливаем цвет, реконструируем утраченные фрагменты.",
   keywords: ["реставрация фото", "восстановление старых фотографий", "AI реставрация", "реконструкция фото", "ProЯвь", "колоризация фото", "реставрация семейных архивов"],
+  alternates: {
+    canonical: "./",
+  },
   openGraph: {
     type: "website",
     locale: "ru_RU",
     siteName: "ProЯвь",
+    title: "ProЯвь — AI-реставрация и реконструкция фотографий",
+    description: "Возвращаем моменты памяти. Профессиональная реставрация старых фотографий с помощью искусственного интеллекта.",
+    url: "./",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "ProЯвь — AI-лаборатория реставрации фотографий",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ProЯвь — AI-реставрация и реконструкция фотографий",
+    description: "Возвращаем моменты памяти. Реставрация старых фото с помощью искусственного интеллекта.",
+    images: ["/og-image.jpg"],
   },
   robots: {
     index: true,
     follow: true,
   },
 };
-
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ru">
