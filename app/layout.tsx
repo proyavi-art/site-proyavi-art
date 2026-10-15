@@ -80,7 +80,6 @@ export default function RootLayout({
               image: "https://site-proyavi-art.vercel.app/og-image.jpg",
               priceRange: "от 1 500 ₽",
               areaServed: "RU",
-              inLanguage: "ru",
             }),
           }}
         />
