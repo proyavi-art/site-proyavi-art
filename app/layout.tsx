@@ -73,7 +73,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "ProfessionalService",
               name: "ProЯвь",
-              slogan: "Мы есть свет. Мы возвращаем свет мгновениям.",
+              slogan: "Убераем шум, оставляем свет.",
               description:
                 "Цифровое восстановление, реконструкция и колоризация фотографий. Улучшаем качество снимков, возвращаем утраченные детали, естественные цвета и выразительность изображениям любого времени.",
               url: "https://site-proyavi-art.vercel.app",
