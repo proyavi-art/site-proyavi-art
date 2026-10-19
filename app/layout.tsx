@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://site-proyavi-art.vercel.app"),
+  metadataBase: new URL("https://proyavi.art"),
   title: {
     default: "ProЯвь — AI-реставрация и реконструкция фотографий",
     template: "%s | ProЯвь",
@@ -73,11 +73,11 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "ProfessionalService",
               name: "ProЯвь",
-              slogan: "Убераем шум, оставляем свет.",
+              slogan: "Мы есть свет. Мы возвращаем свет мгновениям.",
               description:
                 "Цифровое восстановление, реконструкция и колоризация фотографий. Улучшаем качество снимков, возвращаем утраченные детали, естественные цвета и выразительность изображениям любого времени.",
-              url: "https://site-proyavi-art.vercel.app",
-              image: "https://site-proyavi-art.vercel.app/og-image.jpg",
+              url: "https://proyavi.art",
+              image: "https://proyavi.art/og-image.jpg",
               priceRange: "от 1 500 ₽",
               areaServed: "RU",
             }),
